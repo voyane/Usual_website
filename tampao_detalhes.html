@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/tampao_detalhes.css">
+    <title>Tampão</title>
+</head>
+<body>
+     <header>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="./IMG/Layer_1usual.png" alt="">
+        </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    </header>
+    <aside class="side-menu">
+        <div class="back">
+            <img src="./IMG/left-arrow_5343252.png" alt="">
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="">
+                <span >
+                    <a href="women.html" style="color: #fff;">Mulher</a>
+                </span>
+            </div>
+            <div class="line"></div>
+
+            <ul>
+                <li><a href="women_products.html">Produtos</a></li>
+                <h6>Canto da Mulher</h6>
+                <li><a href="perguntas_mulher.html">Perguntas & Respostas</a></li>
+                <li><a href="canto_da_mulher.html">Artigos</a></li>
+                <h6>Calculadora</h6>
+                <li><a href="calculo_menstrual.html">Menstruação</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="icone">
+                <span>
+                    <a href="babies.html"style="color: #fff;">Bebé</a>
+                </span>
+            </div>
+            <div class="line"></div>
+            <ul>
+                <li><a href="babies_products.html">Produtos</a></li>
+                <h6>Canto do Bebé</h6>
+                <li><a href="perguntas_bebe.html">Perguntas & Respostas</a></li>
+                <li><a href="canto_do_bebe.html">Artigos</a></li>
+                <h6>Calculadora</h6>
+                <li><a href="calculo_gestacional.html">Gestação</a></li>
+                <li><a href="nascimento.html">Nascimento do Bebé</a></li>
+                <li><a href="calendario_gravidez.html">Calendário</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="line"></div>
+            <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="">
+                <span>Minha Conta</span>
+            </div>
+            <div class="line"></div>
+
+            <ul>
+                <li class="oe_login"><a href="login.html">Login</a></li>
+                <li class="oe_logout"><a href="login_logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="image-text">
+        <div class="card-click">
+            <img src="/images/Tampão super plus frnt.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+        </div>
+        <div class="text-click">
+            <h1> Tampões</h1>
+            <p>
+                Liberdade e conforto para acompanhar o seu ritmo. Com design ergonômico e material macio, os tampões Usual garantem proteção segura, máxima discrição e confiança em qualquer situação — seja no trabalho, em casa ou durante atividades físicas.
+            </p>
+            <h3>Principais Benefícios</h3>    
+            <p>
+                Proteção segura contra fugas para o dia todo;<br/>
+                Design ergonômico, fácil de aplicar e confortável;<br/>
+                Material macio, que respeita a delicadeza do corpo;<br/>
+                Discrição total, permitindo movimentos livres e confiança;<br/>
+                Disponível em diferentes níveis de absorção para cada necessidade.
+            </p>  
+            <h3>Por que escolher a Usual?</h3> 
+            <p>
+                Materiais suaves e dermatologicamente testados.<br/>
+                Livre de fragrâncias e substâncias agressivas.<br/>
+                Produzido com foco no bem-estar do bebê.
+            </p>
+        </div>
+        <div class="grid-table">
+            <div class="grid-cards">
+                <div class="cards">
+                    <img src="images/Tampão regular  frnt.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                </div>
+                <div class="cards">
+                    <img src="images/Tampão Super frent.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                </div>
+                <div class="cards">
+                    <img src="images/Tampão super plus frnt.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                </div>
+            </div>
+            <div class="table-container">
+                <h1>Tamanho e Absorção</h3>
+                <table class="tabela-tampao">
+                     <tbody>
+                        <tr>
+                            <td>Regular</td>
+                            <td>----------------</td>
+                            <td>ideal para fluxo moderado</td>
+                        </tr>
+                        <tr>
+                            <td>Super</td>
+                            <td>----------------</td>
+                            <td>indicado para fluxo mais intenso</td>
+                        </tr>
+                        <tr>
+                            <td>Super Plus</td>
+                            <td>----------------</td>
+                            <td>pensado para os primeiros dias ou fluxo leve</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div> 
+        </div> 
+    </section>
+<div id="imageModal" class="modal">
+    <span class="close" onclick="closeImage()">&times;</span>
+    <img class="modal-content" id="modalImg">
+    <a class="download-btn" id="downloadBtn"> Baixar Imagem</a>
+</div>
+<footer class="footer">
+    <div class="footer-main">
+        <!-- Informações -->
+        <div class="footer-info">
+            <p><strong>Firma:</strong> USUAL PORTUGAL, LDA</p>
+            <p><strong>Sede Portugal:</strong> Rua Diogo Cão #3, Loja 2, 2660-445 Santo António dos Cavaleiros, Portugal.</p>
+            <p><strong>Endereço telefónico Portugal:</strong> +351 21 988 1178</p>
+            <p><strong>Endereço eletrónico Portugal:</strong> info@usual.pt</p>
+        </div>
+
+        <!-- Links + redes -->
+        <div class="footer-right">
+            <ul class="footer-menu">
+                <li><a href="home.html">Home</a></li>
+                <li><a href="women.html">Mulher</a></li>
+                <li><a href="babies.html">Bebé</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+
+            <div class="footer-social">
+                <a href="https://facebook.com">f</a>
+                <a href="https://instagram.com">i</a>
+                <a href="https://linkedin.com">in</a>
+                <a href="https://youtube.com">▶</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logo em baixo -->
+    <div class="footer-logo">
+        <img src="/IMG/Layer_footer.png" alt="USUAL">
+    </div>
+
+    <!-- Linha inferior -->
+    <div class="footer-bottom">
+        <p>Copyright © Voyane Rogério</p>
+    </div>
+</footer>
+    <script src="JS/tampao_detalhes.js"></script>
+</body>
+</html>

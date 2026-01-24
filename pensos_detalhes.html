@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/pensos_detalhes.css">
+    <title>Pensos</title>
+</head>
+<body>
+     <header>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="./IMG/Layer_1usual.png" alt="">
+        </a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+    </header>
+    <aside class="side-menu">
+        <div class="back">
+            <img src="./IMG/left-arrow_5343252.png" alt="">
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="">
+                <span >
+                    <a href="women.html" style="color: #fff;">Mulher</a>
+                </span>
+            </div>
+            <div class="line"></div>
+
+            <ul>
+                <li><a href="women_products.html">Produtos</a></li>
+                <h6>Canto da Mulher</h6>
+                <li><a href="perguntas_mulher.html">Perguntas & Respostas</a></li>
+                <li><a href="canto_da_mulher.html">Artigos</a></li>
+                <h6>Calculadora</h6>
+                <li><a href="calculo_menstrual.html">Menstruação</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="icone">
+                <span>
+                    <a href="babies.html"style="color: #fff;">Bebé</a>
+                </span>
+            </div>
+            <div class="line"></div>
+            <ul>
+                <li><a href="babies_products.html">Produtos</a></li>
+                <h6>Canto do Bebé</h6>
+                <li><a href="perguntas_bebe.html">Perguntas & Respostas</a></li>
+                <li><a href="canto_do_bebe.html">Artigos</a></li>
+                <h6>Calculadora</h6>
+                <li><a href="calculo_gestacional.html">Gestação</a></li>
+                <li><a href="nascimento.html">Nascimento do Bebé</a></li>
+                <li><a href="calendario_gravidez.html">Calendário</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="line"></div>
+            <ul>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+        <div class="menu-group">
+            <div class="menu-title">
+                <img src="./IMG/user-check.png" alt="">
+                <span>Minha Conta</span>
+            </div>
+            <div class="line"></div>
+
+            <ul>
+                <li class="oe_login"><a href="login.html">Login</a></li>
+                <li class="oe_logout"><a href="login_logout.html">Logout</a></li>
+            </ul>
+        </div>
+    </aside>
+    <section class="slider">
+        <div class="list">
+            <div class="item">
+                <img src="images/pensos diarios.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                <div class="info">
+                    <h1>PENSOS ULTRAFINOS DIÁRIOS</h1>
+                    <p>
+                        Sinta leveza e proteção todos os dias! Os pensos diários ultrafinos da Usual oferecem conforto discreto e respirabilidade, mantendo a pele seca e segura durante toda a rotina. Ideais para quem busca proteção suave e eficiente.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/pensos regular.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                <div class="info">
+                    <h1>PENSOS ULTRAFINOS REGULARES</h1>
+                    <p>
+                        Proteção confortável e discreta para o dia-a dia! foram Os pensos ultrafinos Usual Regular desenvolvidos para fluxos leves a moderados, proporcionando absorção eficiente, conforto duradouro e uma sensação de frescor durante todo o dia.Graças ao seu formato anatómico e camada respirável, adaptam-se perfeitamente ao corpo, oferecendo liberdade de movimento e segurança em qualquer momento da rotina.
+                    </p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="images/IMG_2319 copiar copy.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                    <div class="info">
+                        <h1>PENSOS ULTRAFINOS SUPER</h1>
+                        <p>
+                            Segurança reforçada para os dias de maior fluxo! Os pensos ultrafinos Usual Super oferecem absorção superior e máxima confiança, mantendo a pele seca e protegida por mais tempo. Com tecnologia respirável e toque suave, proporcionam conforto, proteção e bem-estar em cada detalhe para que te sintas segura e confiante em todos os momentos do dia.
+                        </p>
+                    </div>
+            </div>
+            <div class="item">
+                <img src="images/p Pensos Noturnos frnt.jpg" alt="" class="img-prev" onclick="openImage(this.src)">
+                <div class="info">
+                    <h1>PENSOS ULTRAFINOS NOTURNOS</h1>
+                    <p>
+                        Durma tranquila com proteção máxima! Os pensos noturnos ultrafinos da Usual garantem absorção superior e conforto prolongado, mantendo a pele seca a noite inteira. Conforto e segurança para noites tranquilas.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev">&lt;</button>
+            <button id="next">&gt;</button>
+        </div>
+        <ul class="dots">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </section>
+    <div id="imageModal" class="modal">
+        <span class="close" onclick="closeImage()">&times;</span>
+        <img class="modal-content" id="modalImg">
+        <a class="download-btn" id="downloadBtn"> Baixar Imagem</a>
+    </div>
+    <footer class="footer">
+        <div class="footer-main">
+            <!-- Informações -->
+            <div class="footer-info">
+                <p><strong>Firma:</strong> USUAL PORTUGAL, LDA</p>
+                <p><strong>Sede Portugal:</strong> Rua Diogo Cão #3, Loja 2, 2660-445 Santo António dos Cavaleiros, Portugal.</p>
+                <p><strong>Endereço telefónico Portugal:</strong> +351 21 988 1178</p>
+                <p><strong>Endereço eletrónico Portugal:</strong> info@usual.pt</p>
+            </div>
+
+            <!-- Links + redes -->
+            <div class="footer-right">
+                <ul class="footer-menu">
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="women.html">Mulher</a></li>
+                    <li><a href="babies.html">Bebé</a></li>
+                    <li><a href="sobre.html">Sobre Nós</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+
+                <div class="footer-social">
+                    <a href="https://facebook.com">f</a>
+                    <a href="https://instagram.com">i</a>
+                    <a href="https://linkedin.com">in</a>
+                    <a href="https://youtube.com">▶</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo em baixo -->
+        <div class="footer-logo">
+            <img src="/IMG/Layer_footer.png" alt="USUAL">
+        </div>
+
+        <!-- Linha inferior -->
+        <div class="footer-bottom">
+            <p>Copyright © Voyane Rogério</p>
+        </div>
+    </footer>
+    <script src="JS/pensos_detalhes.js"></script>
+</body>
+</html>
