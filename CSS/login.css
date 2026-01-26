@@ -1,0 +1,246 @@
+@font-face{
+    font-family: 'Safiro';
+    src: url('../safiro-font/safiro-medium.otf') format('opentype');
+}
+/*Reiniciar*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    
+}
+
+body{
+    font-family: 'Safiro';
+    overflow-x: hidden;
+}
+/*Nav Top*/
+header{
+    position: sticky;
+    top: 0;
+    z-index: 9000;
+}
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    background: #FFB000;
+    padding: 0 20px;
+}
+.logo img{
+    max-width: 140px;
+    margin-left: 50px;
+    padding: 10px;
+}
+.logo img:hover{
+    transform: scale(1.05);
+}
+/*Botão Hamburguer*/
+.mobile-menu{
+    cursor: pointer;
+    z-index: 10000;
+}
+.mobile-menu div{
+    width: 40px;
+    height: 3px;
+    margin: 6px;
+    background:#5B2260;
+    transition: .4s;
+}
+/*Animação do Botão Hamburguer*/
+.mobile-menu.active .line1{
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+.mobile-menu.active .line2{
+    opacity: 0;
+}
+.mobile-menu.active .line3{
+    transform: rotate(45deg) translate(-5px, 7px);
+}
+/*Painel Lateral*/
+.side-menu{
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 60vh;
+    height: 100vh;
+    z-index: 10000;
+    background-image: url('../IMG/layout.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 25px 25px;
+    transition: right 1s ease-in-out;
+    color: #fff;
+    overflow-y: auto;
+}
+.side-menu.active{
+    right: 0;
+}
+/*Topo do menu*/
+.side-menu .back{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    width: 100%;
+    text-align: right;
+    animation: fadeSlide .4s ease-in-out;
+}
+.side-menu .back img{
+    width: 24px;
+    filter: invert(1);
+    transition: transform .3s ease;
+}
+.side-menu .back:hover img{
+    transform: translateX(-3px);
+}
+.side-menu .back:active{
+    transform: translateX(-5px);
+    opacity: 0.7;
+    transition: .2s;
+}
+/*Secções do menu*/
+.menu-group{
+    margin: 30px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+.menu-title{
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.menu-title img{
+    width: 22px;
+    filter: invert(1);
+}
+.line{
+    height: 1px;
+    width: 250px;
+    margin: 10px auto;
+    background: #a47dba;
+}
+/*Links*/
+.menu-group ul h6{
+    font-size: 16px;
+}
+.menu-group ul a{
+    font-size: 16px;
+    display: block;
+    padding: 12px 0;
+    color: #fff;
+}
+.menu-group ul a:hover{
+    opacity: .8;
+    margin-left: 3px;
+}
+.menu-group ul li{
+    line-height: 1.8;
+    list-style: none;
+}
+/*Login - Logout*/
+.oe_login a, .oe_logout a{
+    font-size: 16px;
+    color: #fff;
+    font-weight: 600;
+}
+.oe_login a:hover, .oe_logout a:hover{
+    opacity: .7;
+}
+
+/*Responsivo mobile*/
+@media(max-width:768px){
+    .side-menu{
+        width: 40vw;
+    }
+}
+@keyframes fadeSlide{
+    0%{
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+/*------------------Login----------------------*/
+.container{
+    background-image: url(../IMG/Layer_1usual.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: 60%;
+    height: 100vh;
+}
+.container-form{
+    width: 100%;
+    max-width: 500px;
+    margin: 10% auto;
+    background-color: #a47dba80;
+    padding: 30px;
+    border-radius: 20px;
+}
+.container-form h3{
+    text-align: center;
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #fff;
+}
+.group-form{
+    position: relative;
+    margin: 20PX;
+}
+.group-form label{
+    margin-bottom: 20px;
+    color: #fff;
+}
+.group-form input{
+    margin-top: 10PX;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+}
+
+button{
+    width: 30%;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+    background: #5B2260;
+    margin: 0 20px;
+}
+button:hover{
+    transform: scale(1.05);
+    background-color: #FFB000;
+    color: #000;
+}
+.signUp{
+    position: absolute;
+    right: 40%;
+    color: #fff;
+}
+.signUp a{
+    border: 1px solid;
+    padding: 5px;
+    border-radius: 10px;
+    background: #FFB00080;
+    color: #fff;
+}
