@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/login.css">
-    <title>Login</title>
+    <title>Login/Registo</title>
 </head>
 <body>
     <header>
@@ -80,23 +80,65 @@
             </ul>
         </div>
     </aside>
-    <section class="container">
-        <div class="container-form">
-            <h3>Entrar</h3>
-            <form action="">
-                <div class="group-form">
-                    <input type="text" name="username" placeholder="Usuário" required/>
-                </div>
-                <div class="group-form">
-                    <input type="password" id="password" placeholder="Senha" required/>
-                    <span class="toggle" onclick="togglePassword()" style="position: absolute; top: 20%; right: 12px;">👁</span>
-                </div>
-                <button type="submit">Login</button>
-                <p class="signUp">
-                    Não tens conta?
-                    <a href="signup.html">Criar conta</a>
+
+        <!-- Container principal -->
+    <!-- A classe active-login controla qual formulário aparece -->
+    <section class="container active-login">
+
+        <!-- formulários -->
+        <div class="forms-container">
+
+            <!-- Formulário de Login -->
+            <div class="form-container login">
+                <h2>Login</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Login</button>
+                </form>
+
+                <!-- Link para trocar para Sign Up -->
+                <p>
+                    Don't have an account?
+                    <span class="switch-form">Register</span>
                 </p>
-            </form>
+            </div>
+
+            <!-- Formulário de Registo -->
+            <div class="form-container signup">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <!--Nome-->
+                    <input type="text" placeholder="Nome Completo" required>
+                    <!--Email-->
+                    <input type="email" placeholder="Email" required>
+                    <!--Senha-->
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Senha" required>
+                        <span class="toggle-password" data-target="password">👁️</span>
+                    </div>
+                    <!-- Confirmar senha -->
+                    <div class="confirm">
+                        <input type="password" id="confirm" placeholder="Confirmar senha" required>
+                    </div>
+                    <!--Mensagem de erro-->
+                    <small id="error-message"></small>
+                    <!--Indicador de força-->
+                    <div class="password-strength">
+                        <span></span>
+                    </div>
+
+                    <!--Botão de Registo-->
+                    <button type="submit">Register</button>
+                </form>
+
+                <!-- Link para trocar para Login -->
+                <p>
+                    Already have an account?
+                    <span class="switch-form">Login</span>
+                </p>
+            </div>
+
         </div>
     </section>
     <script src="JS/login.js"></script>
