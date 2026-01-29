@@ -180,67 +180,167 @@ nav{
 }
 /*------------------Login----------------------*/
 .container{
-    background-image: url(../IMG/Layer_1usual.png);
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: 60%;
-    height: 100vh;
-}
-.container-form{
-    width: 100%;
-    max-width: 500px;
-    margin: 10% auto;
-    background-color: #a47dba80;
-    padding: 30px;
-    border-radius: 20px;
-}
-.container-form h3{
-    text-align: center;
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #fff;
-}
-.group-form{
-    position: relative;
-    margin: 20PX;
-}
-.group-form label{
-    margin-bottom: 20px;
-    color: #fff;
-}
-.group-form input{
-    margin-top: 10PX;
-    width: 100%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 50px);
 }
 
-button{
-    width: 30%;
-    padding: 10px;
-    border-radius: 10px;
-    border: none;
-    font-size: 14px;
-    color: #fff;
-    cursor: pointer;
+
+
+
+/*Right Side: Forms*/
+.forms-container{
+    display: flex;
+    width: 450px;
+    height: 600px;
     background: #5B2260;
-    margin: 0 20px;
+    border-radius: 20px;
+    border: 2px solid #485460;
+    overflow: hidden;
+    position: relative;
 }
-button:hover{
-    transform: scale(1.05);
-    background-color: #FFB000;
-    color: #000;
-}
-.signUp{
+.form-container{
     position: absolute;
-    right: 40%;
-    color: #fff;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+    transition: transform 1.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-.signUp a{
-    border: 1px solid;
-    padding: 5px;
+.form-container h2{
+    margin-bottom: 20px;
+    text-align: center;
+    color: #eee;
+    animation: bounce 3s infinite ease-in-out;
+    font-family: 'gladies';
+}
+@keyframes bounce{
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-15px);
+    }
+}
+.form-container input{
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: 1px solid #888e9b;
+    background-color: #485460;
+    color: #eee;
+    border-radius: 5px;
+    outline: none;
+}
+.form-container input::placeholder{
+    color: #eee;
+}
+.form-container button{
+    width: 100%;
+    padding: 15px;
+    margin-top: 20px;
+    background: #4ecdc4;
+    border: none;
     border-radius: 10px;
-    background: #FFB00080;
-    color: #fff;
+    font-size: 18px;
+    font-family: 'gladies';
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+.form-container button:hover{
+    background: #00d8d6;
+    transform: scale(1.05);
+}
+.form-container p{
+    text-align: center;
+    margin-top: 20px;
+    color: #eee;
+}
+.form-container p span{
+    color: #4ecdc4;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #485460;
+    padding: 5px;
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+.form-container p span:hover{
+    background: #00d8d6;
+    color: #5B2260;
+    transform: scale(1.02);
+}
+
+.password-field{
+    position: relative;
+}
+.password-field input{
+    width: 100%;
+}
+.toggle-password{
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    user-select: none;
+    cursor: pointer;
+}
+/*Mensagem de erro*/
+#error-message{
+    display: block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: red;
+}
+/*Campo inválido*/
+input.error{
+    border: 2px solid red;
+}
+/*Força da senha*/
+.password-strength{
+    height: 6px;
+    background: #eee;
+    border-radius: 5px;
+    margin: 10px 0;
+    overflow: hidden;
+}
+.password-strength span{
+    display: block;
+    height: 100%;
+    width: 0;
+    transition: width 0.3s;
+}
+
+/*Cores*/
+.weak{background: red; width: 33%;}
+.medium{background: orange;width: 66%;}
+.strong{background: green; width: 100%;}
+
+
+/*Swipe animation for forms*/
+.login{
+    transform: translateX(0);
+}
+.signup{
+    transform: translateX(100%);
+    background-color: #5B2260;
+}
+.active-login .login{
+    transform: translateX(0);
+}
+
+.active-login .signup{
+    transform: translateX(100%);
+}
+.active-signup .login{
+    transform: translateX(-100%);
+}
+.active-signup .signup{
+    transform: translateX(0);
 }
