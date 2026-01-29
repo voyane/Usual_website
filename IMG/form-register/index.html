@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login & Register</title>
+</head>
+<body>
+
+    <!-- Container principal -->
+    <!-- A classe active-login controla qual formulário aparece -->
+    <div class="container active-login">
+
+        <!-- Lado esquerdo: mensagem de boas-vindas -->
+        <div class="welcome-section">
+            <h1 class="welcome">Welcome</h1>
+            <p>
+                Join our community and enjoy seamless access to exclusive features.
+            </p>
+        </div>
+
+        <!-- Lado direito: formulários -->
+        <div class="forms-container">
+
+            <!-- Formulário de Login -->
+            <div class="form-container login">
+                <h2>Login</h2>
+                <form>
+                    <input type="email" placeholder="Email" required>
+                    <input type="password" placeholder="Senha" required>
+                    <button type="submit">Login</button>
+                </form>
+
+                <!-- Link para trocar para Sign Up -->
+                <p>
+                    Don't have an account?
+                    <span class="switch-form">Register</span>
+                </p>
+            </div>
+
+            <!-- Formulário de Registo -->
+            <div class="form-container signup">
+                <h2>Sign Up</h2>
+                <form id="signup-form">
+                    <!--Nome-->
+                    <input type="text" placeholder="Nome Completo" required>
+                    <!--Email-->
+                    <input type="email" placeholder="Email" required>
+                    <!--Senha-->
+                    <div class="password-field">
+                        <input type="password" id="password" placeholder="Senha" required>
+                        <span class="toggle-password" data-target="password">👁️</span>
+                    </div>
+                    <!-- Confirmar senha -->
+                    <div class="confirm">
+                        <input type="password" id="confirm" placeholder="Confirmar senha" required>
+                    </div>
+                    <!--Mensagem de erro-->
+                    <small id="error-message"></small>
+                    <!--Indicador de força-->
+                    <div class="password-strength">
+                        <span></span>
+                    </div>
+
+                    <!--Botão de Registo-->
+                    <button type="submit">Register</button>
+                </form>
+
+                <!-- Link para trocar para Login -->
+                <p>
+                    Already have an account?
+                    <span class="switch-form">Login</span>
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Script externo -->
+    <script src="script_register.js"></script>
+</body>
+</html>
